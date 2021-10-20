@@ -305,7 +305,8 @@ class RewriterApp(object):
         wb_url = wb_url.replace('#', '%23')
         wb_url = WbUrl(wb_url)
 
-        proto = environ.get('HTTP_X_FORWARDED_PROTO', self.force_scheme)
+        # proto = environ.get('HTTP_X_FORWARDED_PROTO', self.force_scheme)
+        proto = 'https'
 
         if proto:
             environ['wsgi.url_scheme'] = proto
